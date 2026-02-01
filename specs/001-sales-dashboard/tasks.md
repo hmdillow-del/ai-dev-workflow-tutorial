@@ -32,9 +32,9 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Implement `load_data()` function in `app.py` that reads `data/sales-data.csv` with `pd.read_csv`, parses the `date` column, and validates that all 8 expected columns exist
-- [ ] T006 Decorate `load_data()` with `@st.cache_data` for caching in `app.py`
-- [ ] T007 Add error handling in `app.py` to display `st.error()` message if CSV file is missing or columns are invalid (FR-009)
+- [x] T005 Implement `load_data()` function in `app.py` that reads `data/sales-data.csv` with `pd.read_csv`, parses the `date` column, and validates that all 8 expected columns exist
+- [x] T006 Decorate `load_data()` with `@st.cache_data` for caching in `app.py`
+- [x] T007 Add error handling in `app.py` to display `st.error()` message if CSV file is missing or columns are invalid (FR-009)
 
 **Checkpoint**: Data loads successfully and is cached. Error handling works for missing file. User story implementation can now begin.
 
@@ -48,9 +48,9 @@
 
 ### Implementation for User Story 1
 
-- [ ] T008 [US1] Calculate KPI metrics in `app.py`: total sales (`df["total_amount"].sum()`), total orders (`len(df)`)
-- [ ] T009 [US1] Display KPI cards using `st.columns` and `st.metric` in `app.py` with formatted currency (`$XXX,XXX`) for total sales and formatted integer for total orders
-- [ ] T010 [US1] Add dashboard title header ("ShopSmart Sales Dashboard") using `st.title` in `app.py`
+- [x] T008 [US1] Calculate KPI metrics in `app.py`: total sales (`df["total_amount"].sum()`), total orders (`len(df)`)
+- [x] T009 [US1] Display KPI cards using `st.columns` and `st.metric` in `app.py` with formatted currency (`$XXX,XXX`) for total sales and formatted integer for total orders
+- [x] T010 [US1] Add dashboard title header ("ShopSmart Sales Dashboard") using `st.title` in `app.py`
 
 **Checkpoint**: Dashboard shows title and two KPI cards with correct, formatted values. This is the MVP — independently functional and testable.
 
@@ -64,9 +64,9 @@
 
 ### Implementation for User Story 2
 
-- [ ] T011 [US2] Aggregate monthly sales data in `app.py`: group by month from `date` column, sum `total_amount`
-- [ ] T012 [US2] Create Plotly Express line chart in `app.py` with title "Sales Trend Over Time", labeled axes (Month, Sales Amount), and interactive tooltips showing formatted currency values
-- [ ] T013 [US2] Render the trend chart in `app.py` using `st.plotly_chart` with `use_container_width=True`
+- [x] T011 [US2] Aggregate monthly sales data in `app.py`: group by month from `date` column, sum `total_amount`
+- [x] T012 [US2] Create Plotly Express line chart in `app.py` with title "Sales Trend Over Time", labeled axes (Month, Sales Amount), and interactive tooltips showing formatted currency values
+- [x] T013 [US2] Render the trend chart in `app.py` using `st.plotly_chart` with `use_container_width=True`
 
 **Checkpoint**: Dashboard shows KPIs (US1) plus a monthly trend line chart with 12 months, tooltips, and clear labels.
 
@@ -80,9 +80,9 @@
 
 ### Implementation for User Story 3
 
-- [ ] T014 [US3] Aggregate category sales data in `app.py`: group by `category`, sum `total_amount`, sort descending
-- [ ] T015 [US3] Create Plotly Express bar chart in `app.py` with title "Sales by Category", labeled axes, sorted bars, and interactive tooltips with formatted currency values
-- [ ] T016 [US3] Render the category chart in `app.py` using `st.plotly_chart` with `use_container_width=True`
+- [x] T014 [US3] Aggregate category sales data in `app.py`: group by `category`, sum `total_amount`, sort descending
+- [x] T015 [US3] Create Plotly Express bar chart in `app.py` with title "Sales by Category", labeled axes, sorted bars, and interactive tooltips with formatted currency values
+- [x] T016 [US3] Render the category chart in `app.py` using `st.plotly_chart` with `use_container_width=True`
 
 **Checkpoint**: Dashboard shows KPIs (US1), trend chart (US2), and category bar chart with all 5 categories sorted by revenue.
 
@@ -96,9 +96,9 @@
 
 ### Implementation for User Story 4
 
-- [ ] T017 [US4] Aggregate regional sales data in `app.py`: group by `region`, sum `total_amount`, sort descending
-- [ ] T018 [US4] Create Plotly Express bar chart in `app.py` with title "Sales by Region", labeled axes, sorted bars, and interactive tooltips with formatted currency values
-- [ ] T019 [US4] Render the region chart in `app.py` using `st.plotly_chart` with `use_container_width=True`
+- [x] T017 [US4] Aggregate regional sales data in `app.py`: group by `region`, sum `total_amount`, sort descending
+- [x] T018 [US4] Create Plotly Express bar chart in `app.py` with title "Sales by Region", labeled axes, sorted bars, and interactive tooltips with formatted currency values
+- [x] T019 [US4] Render the region chart in `app.py` using `st.plotly_chart` with `use_container_width=True`
 
 **Checkpoint**: Dashboard shows all 4 components — KPIs, trend chart, category chart, and region chart. All user stories are complete.
 
@@ -108,11 +108,11 @@
 
 **Purpose**: Layout refinement and deployment readiness
 
-- [ ] T020 [P] Arrange category and region charts side-by-side using `st.columns` in `app.py` for a professional two-column layout
-- [ ] T021 [P] Add section dividers or subheaders between dashboard sections in `app.py` using `st.subheader` or `st.divider`
-- [ ] T022 Verify all chart titles, axis labels, and tooltips are clear and professional in `app.py`
-- [ ] T023 Run `streamlit run app.py` and validate against quickstart.md verification checklist (total sales ~$650K-$700K, 482 orders, 12 months, 5 categories, 4 regions)
-- [ ] T024 [P] Add `.gitignore` entries for `.venv/` and `__pycache__/` if not already present
+- [x] T020 [P] Arrange category and region charts side-by-side using `st.columns` in `app.py` for a professional two-column layout
+- [x] T021 [P] Add section dividers or subheaders between dashboard sections in `app.py` using `st.subheader` or `st.divider`
+- [x] T022 Verify all chart titles, axis labels, and tooltips are clear and professional in `app.py`
+- [x] T023 Run `streamlit run app.py` and validate against quickstart.md verification checklist (total sales ~$650K-$700K, 482 orders, 12 months, 5 categories, 4 regions)
+- [x] T024 [P] Add `.gitignore` entries for `.venv/` and `__pycache__/` if not already present
 
 ---
 
